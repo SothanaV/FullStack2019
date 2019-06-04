@@ -14,7 +14,7 @@ class Item(models.Model):
     in_stock = models.PositiveIntegerField()
     def __str__(self):
         return self.name
-        
+
 class Trasaction(models.Model):
     item = models.ForeignKey(Item,on_delete=models.CASCADE)
     amount = models.IntegerField()
