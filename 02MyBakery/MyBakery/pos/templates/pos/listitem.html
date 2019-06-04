@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lisy Item</title>
+    <title>List Item</title>
 </head>
 <body>
     <!-- {{item}} -->
@@ -13,6 +13,8 @@
         {{i.name}}
         {{i.price}}
         {{i.in_stock}}
+        <button ><a href={% url 'edit_item' i.pk %}>Edit</a></button>
+        <button ><a href={% url 'sell_item' i.pk %}>Sell</a></button>
         <br>
     {% endfor %}
 </body>
